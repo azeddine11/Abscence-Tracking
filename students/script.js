@@ -1,3 +1,5 @@
-const data = require("../fakerData.json");
-
-console.log(JSON.parse(data));
+fetch("../fakerData.json")
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+  });
